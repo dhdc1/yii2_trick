@@ -46,6 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <?php
 $js = <<<JS
+$('#person-name').focus();
 $(document).on('pjax:success', function() {
   $('#person-name').focus();
 });
