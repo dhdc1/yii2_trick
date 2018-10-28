@@ -14,18 +14,17 @@ use yii\widgets\ActiveForm;
     $form = ActiveForm::begin([
                 'id' => 'form-pjax',
                 'options' => [
-                   
                     'data-pjax' => TRUE
                 ]
     ]);
     ?>
 
-        <?= $form->field($model, 'name')->textInput(['maxlength' => true,'autocomplete'=>'off']) ?>
+    <?= $form->field($model, 'name')->textInput(['maxlength' => true, 'autocomplete' => 'off']) ?>
 
     <div class="form-group">
-    <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 
-<?php ActiveForm::end(); ?>
+    <?php ActiveForm::end(); ?>
 
 </div>
