@@ -1,0 +1,2 @@
+TIME : <?=$time?> O'CLOCK
+
