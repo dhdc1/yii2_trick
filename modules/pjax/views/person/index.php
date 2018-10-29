@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <?php
-    Pjax::begin(['id' => 'pjax-grid','enablePushState'=>FALSE]);
+    Pjax::begin(['id' => 'pjax-div','enablePushState'=>FALSE]);
     ?>
     <?=
     $this->render('create', [
@@ -46,9 +46,16 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <?php
 $js = <<<JS
-$('#person-name').focus();
-$(document).on('pjax:success', function() {
-  $('#person-name').focus();
+
+$(document).keypress(function(e) {
+  if(e.which == 13) {
+    
+  }
+});
+
+$('#pjax-div').on('pjax:end', function() {
+   //alert('success');
+   $('#person-name').focus();
 });
 JS;
 $this->registerJs($js);
