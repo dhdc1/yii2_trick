@@ -37,7 +37,8 @@ class PersonController extends Controller {
 
         $model = new Person();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->name = '';
+            //$model->name = '';
+            $model = new Person(); //reset model
         }
 
 
