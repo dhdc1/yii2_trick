@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
     <?php
-    Pjax::begin(['id' => 'pjax-grid']);
+    Pjax::begin(['id' => 'pjax-grid','enablePushState'=>FALSE]);
     ?>
     <?=
     $this->render('create', [
